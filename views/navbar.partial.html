@@ -1,0 +1,23 @@
+{{ define "navbar" }}
+<nav class="navbar bg-primary text-primary-content">
+    <div class="navbar-start">
+        <img class="h-7 px-4" src="/img/gopher-svgrepo-com.svg" alt="App logo">
+        {{ if .CurrentSession }}
+        <span id="greeting">Welcome, {{ .username }}</span>
+        {{ end }}
+    </div>
+    <div class="navbar-center">
+        <span class="text-lg font-bold mx-auto">
+            Go Fiber HTMx Sessions App
+        </span>
+    </div>
+    <div class="navbar-end">
+        {{ if .CurrentSession }}
+        <button class="btn btn-neutral" hx-post="/api/logout" hx-swap="none"
+            hx-confirm="Are you sure you want to log out of this user?">
+            Logout
+        </button>
+        {{ end }}
+    </div>
+</nav>
+{{ end }}

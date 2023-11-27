@@ -1,0 +1,27 @@
+<h1 class="text-2xl mt-12 font-bold">
+    Login Page
+</h1>
+
+<section>
+    <form class="bg-[#191E24] rounded-xl drop-shadow-xl flex flex-col gap-4 w-96 p-8" action="/api/signin"
+        method="post">
+        <label class="flex flex-col gap-2 justify-start">
+            Email:
+            <input class="input input-bordered input-primary bg-slate-800" type="email" name="email" required autofocus>
+        </label>
+        <label class="flex flex-col gap-2 justify-start">
+            Password:
+            <input class="input input-bordered input-primary bg-slate-800" type="password" name="password" required>
+        </label>
+        <div>
+            <button class="btn btn-primary">Sign In</button>
+        </div>
+    </form>
+</section>
+
+<h2 class="text-lg font-medium">
+    You do not have an account yet?
+    &nbsp;<a class="text-error hover:text-neutral-content" href="/register">
+        Sign up here
+    </a>
+</h2>
